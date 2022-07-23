@@ -1,0 +1,85 @@
+
+header span {
+    color: white;
+}
+header {
+    position: sticky;
+    z-index: 99;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:  80px;
+    padding: 0 2rem;
+    background-color: #5651e5;
+    
+}
+
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    color: white; 
+    visibility: hidden;
+    opacity: 0;      
+   }
+
+nav a{
+        margin: 0 2rem;
+        color: white;
+        text-decoration: none;
+    }
+
+
+nav a:hover {
+    color: black;
+}
+
+
+@media only screen and (max-width: 1024px) {
+   
+    header .nav-btn {
+         visibility: visible;
+         opacity: 1;
+       }
+     header nav {
+          position:fixed;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         display: flex;
+         align-items:center ;
+         justify-content: center;
+         flex-direction: column;
+         gap: 1.5rem;
+         background-color: #5651e5;
+         transition: 1s;
+         transform: translateY(-100vh);
+     }
+ 
+  header .responsive-nav {
+         transform: none;
+     }
+ 
+     nav .nav-close-btn {
+         position: absolute;
+         top: 2rem;
+         right: 2rem;
+     }
+ 
+     nav a{
+         font-size: 1.5rem;
+     }
+ }
+ 
+
+
+
+
+
+
