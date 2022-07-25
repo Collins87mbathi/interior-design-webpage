@@ -1,7 +1,34 @@
-import React from 'react'
+import axios from 'axios';
+import React,{useState} from 'react'
+import {BaseUrl} from "../../components/links/constant"
 import './Contact.css'
 
+
 const Contact = () => {
+  const [loading,setloading] = useState(false)
+ const [name, setName] = useState('');
+ const [email, setEmail] = useState('');
+ const [message, setMessage] = useState('');
+
+
+  const handleSubmit = async (e) => {
+    setloading(true);
+    e.preventDefault();
+    try {
+      const res = await axios.post(BaseUrl + '/sendmail', {
+        name,
+        email,
+        message 
+        });
+        setloading(false);
+        alert(res.data);
+    } catch (error) {
+      alert(error);
+    }
+   
+  }
+
+
 
   return (
     <section className="contact">
@@ -24,11 +51,11 @@ const Contact = () => {
         <div className="contact-item">
         
           <h3 className="contact-title">
-            <span className="contact-icon"> <i class="fas fa-envelope"></i> </span
+            <span className="contact-icon"> <i className="fas fa-envelope"></i> </span
             >email
           </h3>
           <h3 className="contact-text">
-            email@email.com
+           interwoodcraftsuperinteriors@gmail.com
           </h3>
         </div>
        
@@ -44,9 +71,7 @@ const Contact = () => {
         </div>
       </article>
       <article className="contact-form">
-        <form
-          action="https://formspree.io/learncodetutorial@gmail.com"
-          method="POST"
+        <form onSubmit={handleSubmit}
           className="form-group"
         >
           <input
@@ -54,20 +79,23 @@ const Contact = () => {
             name="name"
             placeholder="name"
             className="form-control"
+            onChange={(e)=>setName(e.target.value)}
           />
           <input
             type="email"
             name="email"
             placeholder="email"
             className="form-control"
+            onChange={(e)=>setEmail(e.target.value)}
           />
           <textarea
             name="message"
             placeholder="message"
             className="form-control"
+            onChange={(e)=>setMessage(e.target.value)}
             rows="5"
           ></textarea>
-          <button className="main-btn">send</button>
+          <button className="main-btn">{loading ? "sending..." : "send"}</button>
         </form>
       </article>
       </div>
