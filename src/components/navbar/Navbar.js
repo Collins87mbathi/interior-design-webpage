@@ -16,11 +16,7 @@ const Navbar = () => {
     
 
     return (
-        <>
-        <div className='header-top'>
-        <BiTimeFive/> 
-        <p>Monday – Friday 8 AM – 5 PM</p>
-        </div>
+        
         <header>
        <h1><span><BsFillHouseFill />Inter-wood</span></h1>
 
@@ -37,7 +33,7 @@ const Navbar = () => {
         </button>
         
    </header>
-   </>
+   
     )
 }
 
