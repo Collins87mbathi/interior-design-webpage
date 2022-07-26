@@ -66,7 +66,7 @@ const Contact = () => {
             >telephone
           </h3>
           <h3 className="contact-text">
-          0707072393 , 0796088827
+          0707072393
           </h3>
         </div>
       </article>

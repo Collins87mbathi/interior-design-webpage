@@ -2,6 +2,15 @@
 header span {
     color: white;
 }
+
+.header-top {
+    color: #5651e5;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
 header {
     position: sticky;
     z-index: 99;
