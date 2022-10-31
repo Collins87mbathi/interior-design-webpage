@@ -7,7 +7,7 @@ const About = () => {
     <section className="about">
       <div className="section-center clearfix">
         <article className="about-img">
-            <h1>Welcome to Inter-Wood Interior Design </h1>
+            <h1>Welcome to Inter-Wood kraft Interior</h1>
         </article>
         <article className="about-info">  
           <p className="about-text">
