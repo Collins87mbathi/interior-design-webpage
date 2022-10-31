@@ -55,7 +55,7 @@ const Contact = () => {
             >email
           </h3>
           <h3 className="contact-text">
-           interwoodcraftsuperinteriors@gmail.com
+           interwoodkraftinteriors35@gmail.com
           </h3>
         </div>
        

@@ -12,6 +12,15 @@ function App() {
     <Route path='/contact' element={<Contact/>}/>
     <Route path='/about' element={<About/>}/>
     </Routes>
+    {/* WhatsApp icon */}
+    <a
+        href="https://wa.me/254707072393"
+        class="whatsapp_float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa fa-whatsapp whatsapp-icon"></i>
+      </a>
   </BrowserRouter>  
   );
 }
